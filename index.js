@@ -16,7 +16,7 @@ app.use(morgan("dev"));
 db();
 
 app.get("/", (req, res) => {
-  res.send("Hello!! Welcome to Contacts App");
+  res.send("Hello!! Welcome to Pokedex!!!1");
 });
 
 //routes
