@@ -6,7 +6,7 @@ export const addToFavourites = async (req, res) => {
   try {
     const { _id } = req.profile;
     const { name } = req.params;
-    if (req.profile.favorite_pokemons.includes(name)) {
+    if (req.profile.favorite_pokemons?.includes(name)) {
       const updatedUser = await User.findByIdAndUpdate(
         { _id },
         { $pull: { favorite_pokemons: { $in: name } } },
